@@ -1,7 +1,7 @@
 {
-  "name": "evaluate-news-nlp",
+  "name": "capstone-travel-app",
   "version": "1.0.0",
-  "description": "Fourth project of my nanodegree",
+  "description": "Last project of my nanodegree program",
   "main": "index.js",
   "scripts": {
     "test": "jest --coverage",
@@ -11,15 +11,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/FlavioBravo/evaluate-news-nlp.git"
+    "url": "git+https://github.com/FlavioBravo/capstone-travel-app.git"
   },
   "keywords": [],
   "author": "Flavio Bravo",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/FlavioBravo/evaluate-news-nlp/issues"
+    "url": "https://github.com/FlavioBravo/capstone-travel-app/issues"
   },
-  "homepage": "https://github.com/FlavioBravo/evaluate-news-nlp#readme",
+  "homepage": "https://github.com/FlavioBravo/capstone-travel-app#readme",
   "dependencies": {
     "aylien_textapi": "^0.7.0",
     "body-parser": "^1.19.0",
