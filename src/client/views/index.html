@@ -1,55 +1,99 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap"
-            rel="stylesheet"
-        />
-        <title>Natural language processing</title>
-    </head>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://use.fontawesome.com/f21e5638ba.js"></script>
+    <title>Capstone Travel App</title>
+  </head>
 
-    <body>
+  <body class="container open-sans">
+    <header class="header-container">
+      <nav class="navbar">
+        <div class="logo-container">
+          <img src="./assets/logo.png" class="logo" alt="logo travel app" />
+          <span class="text-lg title">Capstone Travel App</span>
+        </div>
+        <div>
+          <a href="#" class="text-base item"
+            ><i class="fa fa-plane item-icon" aria-hidden="true"></i>Travels</a
+          >
+        </div>
+      </nav>
+    </header>
 
-        <header>
-            <div class="">
-               <img src="./assets/moods.jpg" class="logo" alt="moods">
-            </div>
-            <div class="nunito">
-                navigation
-            </div>
-        </header>
+    <main class="main-container">
+      <section class="section-container">
+        <div class="description">
+          <p class="text-lg open-sans">
+            Type your location and choose your date, you'll get weather
+            information and an image of the location.
+          </p>
+        </div>
+        <form method="POST" class="form-row">
+          <div class="row-input text-base">
+            <label for=""
+              ><i class="fa fa-search icon-form" aria-hidden="true"></i
+            ></label>
+            <input
+              type="text"
+              class="input-form open-sans"
+              name="location"
+              id="location"
+              placeholder="Trip location"
+            />
+          </div>
+          <div class="row-input-md text-base">
+            <label for=""
+              ><i class="fa fa-calendar icon-form" aria-hidden="true"></i
+            ></label>
+            <input
+              type="date"
+              class="input-form open-sans"
+              name="date"
+              id="date"
+            />
+          </div>
+          <button type="submit" class="btn-form open-sans">Search</button>
+        </form>
+      </section>
+    </main>
 
-        <main>
-            <section>
-                <form class="nunito" onsubmit="return Client.handleSubmit(event)">
-                    <label for="feeling">Sentiment Analysis</label>
-                    <input id="name" class="nunito" type="text" name="input" value="" placeholder="type URL or text">
-                    <input type="submit" class="btn nunito" name="submit" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
-                </form>
-            <section>
+    <footer class="footer-container bg-footer">
+      <p class="text-base text-center">
+        <i>Copyright 2020 - Last Project Of My Nanodegree - Udacity</i>
+      </p>
+      <div class="social">
+        <a href=""
+          ><i
+            class="fa fa-facebook-square icon-social text-lg"
+            aria-hidden="true"
+          ></i
+        ></a>
+        <a href=""
+          ><i class="fa fa-instagram icon-social text-lg" aria-hidden="true"></i
+        ></a>
+        <a href=""
+          ><i
+            class="fa fa-linkedin-square icon-social text-lg"
+            aria-hidden="true"
+          ></i
+        ></a>
+      </div>
+    </footer>
 
-            <section class="nunito">
-                <strong>Form Results:</strong>
-                <div id="results"></div>
-            </section>
-        </main>
-
-        <footer  class="footer-container bg-footer nunito">
-            <p class="text-base">
-                <i>Copyright 2020 - Fourth Project Of My Nanodegree - Udacity</i>
-              </p>
-        </footer>
-        
-        <script>
-            // Check that service workers are supported
-            if ('serviceWorker' in navigator) {
-                // Use the window load event to keep the page load performant
-                window.addEventListener('load', () => {
-                    navigator.serviceWorker.register('/service-worker.js');
-                });
-            }
-        </script>
-    </body>
+    <script>
+      // Check that service workers are supported
+      if ("serviceWorker" in navigator) {
+        // Use the window load event to keep the page load performant
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register("/service-worker.js");
+        });
+      }
+    </script>
+  </body>
 </html>
