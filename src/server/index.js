@@ -26,8 +26,8 @@ app.use((req, res, next) => {
 });
 
 //EndPoint
-const feeling = require("./feeling");
-app.use("/api/feeling", feeling);
+const feeling = require("./travel");
+app.use("/api/travel", feeling);
 
 //Public Folder
 app.use(express.static(publicPath));

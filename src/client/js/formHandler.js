@@ -1,31 +1,22 @@
+//Add click event for generate Button.
+const submitBtn = document.getElementById("submit");
+
 const handleSubmit = (event) => {
   event.preventDefault();
 
-  // check what type of text was put into the form field
-  const formText = document.getElementById("name").value;
-  const objectData = Client.checkForName(formText);
+  const locationInput = document.getElementById("location").value;
+  const dateInput = document.getElementById("date").value;
 
-  if (formText === "") {
+  if (locationInput === "" || dateInput === "") {
     alert("all fields should be completed");
-    evt.preventDefault();
     return;
   }
 
-  fetch(`api/feeling?mode=${objectData.mode}&value=${objectData.value}`, {
-    method: "GET",
-    headers: {
-      "Content-Type": "application/json",
-    },
-  })
-    .then((res) => res.json())
-    .then((res) => {
-      saveData(res.respond);
-    })
-    .catch((err) => console.log("handleSubmit Error:", err));
-};
-
-const saveData = (dataObject) => {
-  fetch("api/feeling", {
+  const dataObject = {
+    location: locationInput,
+    date: dateInput,
+  };
+  fetch("api/travel", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -35,22 +26,12 @@ const saveData = (dataObject) => {
     .then((res) => res.json())
     .then((res) => {
       if (res.ok) {
-        updateUI(res.respond);
+        console.log(res.respond);
       }
     })
-    .catch((err) => console.log("saveData Error:", err));
+    .catch((err) => console.log("handleSubmit Error:", err));
 };
 
-const updateUI = (response) => {
-  cleanForm();
-  const newP = document.createElement("p");
-  newP.textContent = `text: ${response.text} | polarity: ${response.polarity} | polarity_confidence: ${response.polarity_confidence} | subjectivity: ${response.subjectivity} | subjectivity_confidence: ${response.subjectivity_confidence}`;
-  const resultsDiv = document.getElementById("results");
-  resultsDiv.appendChild(newP);
-};
+submitBtn.addEventListener("click", handleSubmit);
 
-const cleanForm = () => {
-  document.getElementById("name").value = "";
-};
-
-export { handleSubmit, saveData };
+export { handleSubmit };
