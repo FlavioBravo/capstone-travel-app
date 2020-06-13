@@ -17,10 +17,18 @@
         <div class="logo-container">
           <img src="./assets/logo.png" class="logo" alt="logo travel app" />
           <span class="text-lg title">Capstone Travel App</span>
+          <i class="fa fa-bars text-base bar" id="bar" aria-hidden="true"></i>
         </div>
-        <div>
+        <div class="options-menu" id="options-menu">
           <a href="#" class="text-base item"
             ><i class="fa fa-plane item-icon" aria-hidden="true"></i>Travels</a
+          >
+          <a href="#" class="text-base item"
+            ><i class="fa fa-h-square item-icon" aria-hidden="true"></i
+            >Hotels</a
+          >
+          <a href="#" class="text-base item"
+            ><i class="fa fa-car item-icon" aria-hidden="true"></i>Car Rental</a
           >
         </div>
       </nav>
@@ -69,30 +77,9 @@
         </div>
         <div class="result-container">
           <div class="message">
-            <span class="text-lg open-sans">Desired destination result</span>
+            <span class="text-lg open-sans">Desired destinations result:</span>
           </div>
-          <div class="card-container">
-            <div class="card">
-              <img
-                src="https://pixabay.com/get/55e0d742435ba414f6da8c7dda793679153ddee053516c48702679d4944dc75ab0_1280.jpg"
-                alt=""
-                class="img-card"
-              />
-              <div class="content">
-                <span class="text-base open-sans destiny"
-                  >My trip to: Madrid, Spain</span
-                >
-                <span class="text-md open-sans">Population: 3255944</span>
-                <span class="text-md open-sans">Latitude: 40.4165</span>
-                <span class="text-md open-sans">Longitude : -3.70256</span>
-                <span class="text-md open-sans">High Temperature : 26.6</span>
-                <span class="text-md open-sans">Low Temperature : 16.3</span>
-                <span class="text-md open-sans"
-                  >Broken clouds throughout the day.</span
-                >
-              </div>
-            </div>
-          </div>
+          <div class="card-container" id="result"></div>
         </div>
       </section>
     </main>
@@ -102,16 +89,20 @@
         <i>Copyright 2020 - Last Project Of My Nanodegree - Udacity</i>
       </p>
       <div class="social">
-        <a href=""
+        <a
+          href="https://www.facebook.com/flavioalfonso.bravosantos"
+          target="_blank"
           ><i
             class="fa fa-facebook-square icon-social text-lg"
             aria-hidden="true"
           ></i
         ></a>
-        <a href=""
+        <a href="https://www.instagram.com/fabras21/" target="_blank"
           ><i class="fa fa-instagram icon-social text-lg" aria-hidden="true"></i
         ></a>
-        <a href=""
+        <a
+          href="https://www.linkedin.com/in/flavio-alfonso-bravo-santos/?locale=en_US"
+          target="_blank"
           ><i
             class="fa fa-linkedin-square icon-social text-lg"
             aria-hidden="true"

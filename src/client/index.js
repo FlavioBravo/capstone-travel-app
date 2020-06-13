@@ -1,4 +1,3 @@
-import { checkForName } from "./js/nameChecker";
 import { handleSubmit } from "./js/formHandler";
 
 // Importing SASS files
@@ -11,4 +10,4 @@ import "./css/header.scss";
 // Importing image files
 import "../../assets/logo.png";
 
-export { checkForName, handleSubmit };
+export { handleSubmit };

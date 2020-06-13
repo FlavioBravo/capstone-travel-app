@@ -38,7 +38,7 @@ router.post("/", async (req, res) => {
 
   const weatherbitResult = await functions.getWeatherbit(lat, lng);
   const { country_code, data, timezone } = weatherbitResult;
-  const dayWeather = data.find((item) => item.datetime === date);
+  const dayWeather = data.find((item) => item.valid_date === date);
   const weatherObject = {
     country_code,
     dayWeather,
