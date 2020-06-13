@@ -1,6 +1,3 @@
-//Add click event for generate Button.
-const submitBtn = document.getElementById("submit");
-
 const cleanForm = () => {
   document.getElementById("location").value = "";
   document.getElementById("date").value = "";
@@ -104,11 +101,6 @@ const handleSubmit = (event) => {
   postTravel(dataObject);
 };
 
-submitBtn.addEventListener("click", handleSubmit);
-
-//Add click event for generate Button.
-const barBtn = document.getElementById("bar");
-
 const handleBar = (event) => {
   event.preventDefault();
   const bar = document.getElementById("options-menu");
@@ -117,6 +109,21 @@ const handleBar = (event) => {
   console.log(bar.classList);
 };
 
-barBtn.addEventListener("click", handleBar);
+document.addEventListener("DOMContentLoaded", () => {
+  //Add click event for submit Button.
+  const submitBtn = document.getElementById("submit");
+  submitBtn.addEventListener("click", handleSubmit);
 
-export { handleSubmit };
+  //Add click event for bar Button.
+  const barBtn = document.getElementById("bar");
+  barBtn.addEventListener("click", handleBar);
+});
+
+export {
+  handleSubmit,
+  handleBar,
+  cleanForm,
+  validateInput,
+  postTravel,
+  updateUI,
+};
